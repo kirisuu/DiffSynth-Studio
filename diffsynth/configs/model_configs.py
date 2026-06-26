@@ -863,6 +863,13 @@ anima_series = [
         "model_name": "anima_dit",
         "model_class": "diffsynth.models.anima_dit.AnimaDiT",
         "state_dict_converter": "diffsynth.utils.state_dict_converters.anima_dit.AnimaDiTStateDictConverter",
+    },
+    {
+        # Example: ModelConfig(model_id="circlestone-labs/Anima", origin_file_pattern="split_files/diffusion_models/anima-preview.safetensors")
+        "model_hash": "476bcc03a42f058737788c1d2d67d596",
+        "model_name": "anima_dit",
+        "model_class": "diffsynth.models.anima_dit.AnimaDiT",
+        "state_dict_converter": "diffsynth.utils.state_dict_converters.anima_dit.AnimaDiTStateDictConverter",
     }
 ]
 
