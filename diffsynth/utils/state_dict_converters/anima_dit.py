@@ -1,6 +1,14 @@
 def AnimaDiTStateDictConverter(state_dict):
     new_state_dict = {}
-    for key in state_dict:
-        value = state_dict[key]
-        new_state_dict[key.replace("net.", "")] = value
+
+    for key, value in state_dict.items():
+
+        if key.startswith("net."):
+            key = key.replace("net.", "", 1)
+
+        elif key.startswith("model.diffusion_model."):
+            key = key.replace("model.diffusion_model.", "", 1)
+
+        new_state_dict[key] = value
+
     return new_state_dict
